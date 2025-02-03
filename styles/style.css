@@ -16,21 +16,71 @@ body {
     "header"
     "main"
     "footer";
+  font-family: IBM Plex Mono;
+
 }
 
 .header {
+  display: grid;
+  grid-template-areas:
+    "rec"
+    "navigation"
+    "focus"
+    "text";
   grid-area: header;
-  justify-content: center;
   background-image: url("/images/cover-image-dark.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: 668px;
+  /* min-height: 668px; */
+}
+
+.header__rec {
+  position: relative;
+  grid-area: rec;
+  justify-self: end;
+  margin: 10px 38px 0px 0px;
+  min-width: 33px;
+
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  color: var(--accent-color);
+}
+
+/* Точка */
+.header__rec::before {
+  position: absolute;
+  top: 8px;
+  right: -19px;
+  box-shadow: 0px 0px 4px 2px var(--accent-color);
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  width: 9px;
+  height: 9px;
+  content: "";
+}
+
+/* Граница */
+.header__rec::after {
+  position: absolute;
+  top: 0;
+  right: -28px;
+  border-top: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);
+  width: 25px;
+  height: 25px;
+  content: "";
 }
 
 .header__theme-menu {
-  margin: 75px 10px 65px 295px;
-  background-color: azure;
+  /* margin: 75px 10px 65px 295px; */
+  margin: 39px 10px 0 0;
+  display: flex;
+  grid-area: navigation;
+  justify-self: end;
+
 }
 
 .header__theme-menu-list {
@@ -41,25 +91,31 @@ body {
 }
 
 .header__theme-menu-item {
-  font-family: IBM Plex Mono;
-  font-size: 18px;
   font-weight: 400;
+  font-size: 18px;
   line-height: 18px;
+  color: var(--accent-color);
 }
 
 .header__theme-menu-button {
-  min-block-size: 26px;
   min-inline-size: 70px;
+  min-block-size: 26px;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--accent-color);
 }
 
 .main {
   grid-area: main;
-  min-height: 50px;
   background-color: aquamarine;
+  min-height: 50px;
 }
 
 .footer {
   grid-area: footer;
-  min-height: 50px;
   background-color: green;
+  min-height: 50px;
 }
