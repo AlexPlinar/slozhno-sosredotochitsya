@@ -25,7 +25,7 @@ body {
   grid-template-areas:
     "rec"
     "navigation"
-    "focus"
+    "no-focus"
     "text";
   grid-area: header;
   background-image: url("/images/cover-image-dark.png");
@@ -41,12 +41,12 @@ body {
   justify-self: end;
   margin: 10px 38px 0px 0px;
   min-width: 33px;
+  color: var(--accent-color);
 
   font-weight: 400;
   font-size: 18px;
   line-height: 25px;
   text-align: center;
-  color: var(--accent-color);
 }
 
 /* Точка */
@@ -63,7 +63,7 @@ body {
 }
 
 /* Граница */
-.header__rec::after {
+/* .header__rec::after {
   position: absolute;
   top: 0;
   right: -28px;
@@ -72,14 +72,14 @@ body {
   width: 25px;
   height: 25px;
   content: "";
-}
+} */
 
 .header__theme-menu {
-  /* margin: 75px 10px 65px 295px; */
-  margin: 39px 10px 0 0;
   display: flex;
   grid-area: navigation;
   justify-self: end;
+  /* margin: 75px 10px 65px 295px; */
+  margin: 39px 10px 0 0;
 
 }
 
@@ -91,27 +91,87 @@ body {
 }
 
 .header__theme-menu-item {
+  color: var(--accent-color);
   font-weight: 400;
   font-size: 18px;
   line-height: 18px;
-  color: var(--accent-color);
 }
 
 .header__theme-menu-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-color: transparent;
+  background-color: transparent;
   min-inline-size: 70px;
   min-block-size: 26px;
-  background-color: transparent;
-  border-color: transparent;
 }
 
 .header__theme-menu-button_active {
   border: 1px solid var(--accent-color);
 }
 
+.header__no-focus {
+  grid-area: no-focus;
+  margin: 67px 0 0 10px;
+  color: #DB00FF;
+  font-weight: 700;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 95.7px;
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.header__title {
+  margin: 55px 10px 66px 10px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23.4px;
+}
+
+.title-decor {
+  background-color: var(--accent-color);
+  color: var(--background-color);
+}
+
+.decorated-zone {
+  position: relative;
+}
+
+.decorated-zone::before,
+.decorated-zone::after {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  content: "";
+}
+
+.decorated-zone::before {
+  top: 10px;
+  right: 10px;
+  border-top: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);
+}
+
+.decorated-zone::after {
+  bottom: 10px;
+  left: 10px;
+  border-bottom: 1px solid var(--accent-color);
+  border-left: 1px solid var(--accent-color);
+}
+
 .main {
-  grid-area: main;
-  background-color: aquamarine;
-  min-height: 50px;
+  grid-area: main; 
+  /* внутри тоже надо через Grid, в макете то 1 столбец то 3 */
+}
+
+.main__section-title {
+  color: var(--accent-color);
+  background-color: var(--background-color);
+}
+
+.main__article-title {
+  color: var(--background-color);
+  background-color: var(--accent-color);
 }
 
 .footer {

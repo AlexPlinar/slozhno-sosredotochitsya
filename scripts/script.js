@@ -45,4 +45,6 @@ function initTheme() {
   }
 }
 
+document.querySelector('.decorated-zone').setAttribute('aria-hidden', 'true'); //добавил для скрытия уголком
+
 initTheme();
