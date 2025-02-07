@@ -165,7 +165,7 @@ body {
 }
 
 .main__section {
-  grid-template-columns: 1f;
+  grid-template-columns: 1fr;
   margin: 40px 10px 50px;
 }
 
@@ -174,7 +174,7 @@ body {
   font-size: 18px;
   font-weight: 700;
   line-height: 23.4px;
-  
+
 }
 
 .main__article-title {
@@ -188,6 +188,13 @@ body {
   line-height: 23.4px;
 }
 
+.main__article-subtitle {
+  margin-top: 19.5px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23.4px;
+}
 
 /* Media
 .section1 {
