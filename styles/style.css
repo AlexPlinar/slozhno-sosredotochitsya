@@ -6,6 +6,7 @@
   background-image: url("../images/cover-image-dark.png");
   background-attachment: fixed;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* ИТОГО: НАЧИНАЕМ С МОБИЛЫ,
@@ -21,7 +22,23 @@ body {
     "main"
     "footer";
   font-family: IBM Plex Mono;
+}
 
+a {
+  text-shadow: 2px 2px 1px var(--accent-color);
+  text-decoration: none;
+}
+
+a:hover {
+  border: none;
+  outline: none;
+  border-block-end: 1px solid var(--text-color);
+}
+
+a:focus-visible {
+  border: none;
+  outline: none;
+  border: 1px solid var(--text-color);
 }
 
 .header {
@@ -32,8 +49,8 @@ body {
     "no-focus"
     "text";
   grid-area: header;
-
-  /* min-height: 668px; */
+  grid-template-columns: 1fr;
+  min-height: 668px;
 }
 
 .header__rec {
@@ -63,25 +80,11 @@ body {
   content: "";
 }
 
-/* Граница */
-/* .header__rec::after {
-  position: absolute;
-  top: 0;
-  right: -28px;
-  border-top: 1px solid var(--accent-color);
-  border-right: 1px solid var(--accent-color);
-  width: 25px;
-  height: 25px;
-  content: "";
-} */
-
 .header__theme-menu {
   display: flex;
   grid-area: navigation;
   justify-self: end;
-  /* margin: 75px 10px 65px 295px; */
   margin: 39px 10px 0 0;
-
 }
 
 .header__theme-menu-list {
@@ -92,7 +95,7 @@ body {
 }
 
 .header__theme-menu-item {
-  color: var(--accent-color);
+  color: var(--button-color);
   font-weight: 400;
   font-size: 18px;
   line-height: 18px;
@@ -108,14 +111,26 @@ body {
   min-block-size: 26px;
 }
 
+.header__theme-menu-button:hover {
+  border: 1px solid var(--button-hover-color);
+}
+
+.header__theme-menu-button:focus-visible {
+  border: none;
+  outline: none;
+  border-block-end: 1px solid var(--button-color);
+  ;
+}
+
 .header__theme-menu-button_active {
-  border: 1px solid var(--accent-color);
+  border: 1px solid var(--button-color);
+  pointer-events: none;
 }
 
 .header__no-focus {
   grid-area: no-focus;
   margin: 67px 0 0 10px;
-  color: #DB00FF;
+  color: var(--focus-color);
   font-weight: 700;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 95.7px;
@@ -124,6 +139,7 @@ body {
 
 .header__title {
   margin: 55px 10px 66px 10px;
+  grid-area: text;
 }
 
 .title-decor {
@@ -149,15 +165,15 @@ body {
 .decorated-zone::before {
   top: 10px;
   right: 10px;
-  border-top: 1px solid var(--accent-color);
-  border-right: 1px solid var(--accent-color);
+  border-top: 1px solid var(--button-color);
+  border-right: 1px solid var(--button-color);
 }
 
 .decorated-zone::after {
   bottom: 10px;
   left: 10px;
-  border-bottom: 1px solid var(--accent-color);
-  border-left: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--button-color);
+  border-left: 1px solid var(--button-color);
 }
 
 .main {
@@ -169,8 +185,12 @@ body {
   margin: 40px 10px 50px;
 }
 
+.section4 {
+  margin-block-end: 40px;
+}
+
 .main__section-title {
-  color: var(--accent-color);
+  color: var(--button-color);
   font-size: 18px;
   font-weight: 700;
   line-height: 23.4px;
@@ -178,19 +198,20 @@ body {
 }
 
 .main__article-title {
-  margin-top: 20px;
-  margin-bottom: 10px;
+  margin-block-start: 20px;
+  margin-block-end: 10px;
 }
 
 .main__article-text {
   font-size: 18px;
   font-weight: 400;
   line-height: 23.4px;
+  color: var(--text-color);
 }
 
 .main__article-subtitle {
-  margin-top: 19.5px;
-  margin-bottom: 10px;
+  margin-block-start: 19.5px;
+  margin-block-end: 10px;
   font-size: 18px;
   font-weight: 400;
   line-height: 23.4px;
@@ -209,13 +230,32 @@ body {
   grid-template-columns: 1f;
 } */
 
+.gallery {
+  display: grid;
+  gap: 10px;
+}
+
 .gallery__item img {
   max-width: 100%;
   height: auto;
+  display: block;
 }
 
 .footer {
   grid-area: footer;
-  background-color: green;
-  min-height: 50px;
+  min-height: 668px;
+}
+
+.footer__focus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: auto;
+
+  color: var(--focus-color);
+  font-weight: 700;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 95.7px;
+  text-shadow: 2px 2px 0 var(--accent-color);
 }

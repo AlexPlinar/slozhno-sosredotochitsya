@@ -6,8 +6,9 @@
 :root {
   --background-color: #000028; /* Тёмный фон */
   --text-color: #F1B2CE; /* Светлый текст */
-  /* --button-bg: #444444; Тёмный фон для кнопок */
-  /* --button-hover-bg: #888888; При наведении на кнопки */
   --accent-color: #ff0070; /* Тёмный акцент */
+  --focus-color: #DB00FF; /* Цвет для focus/no-focus*/
+  --button-color: #ff0070; /* Цвет для кнопки*/
+  --button-hover-color: #FF007066; /* Цвет наведения для кнопки*/
 }
 
