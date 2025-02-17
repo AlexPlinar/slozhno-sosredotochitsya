@@ -18,19 +18,23 @@
 }
 
 .theme-light .page {
-  background-image: url("/images/cover-image-light.png");
+  background-image: url("../images/cover-image-light.png");
   background-color: var(--background-color);
   color: var(--text-color);
 }
 
 .theme-light .header__rec {
-  display: none;
+  display: none !important; 
 }
- 
+
 .theme-light .header__theme-menu {
   margin-block-start: 73px;
 }
- 
+
+.theme-auto .page {
+  background-image: url("../images/cover-image-light.png");
+}
+
 /* Работает при Auto theme */
 @media (prefers-color-scheme: light) {
   :root {
@@ -43,7 +47,7 @@
   }
 
   .theme-auto .page {
-    background-image: url("/images/cover-image-light.png");
+    background-image: url("../images/cover-image-light.png");
   }
 
   .theme-auto .header__rec {
