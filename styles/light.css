@@ -31,10 +31,6 @@
   margin-block-start: 73px;
 }
 
-.theme-auto .page {
-  background-image: url("../images/cover-image-light.png");
-}
-
 /* Работает при Auto theme */
 @media (prefers-color-scheme: light) {
   :root {
