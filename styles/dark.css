@@ -18,6 +18,7 @@
 }
 
 .theme-dark .page {
+  background-image: url("../images/cover-image-dark.png");
   background-color: var(--background-color);
   color: var(--text-color);
 }
@@ -41,4 +42,10 @@
     display: block;
   }
 
+  .theme-auto .page {
+    background-image: url("../images/cover-image-dark.png");
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
 }

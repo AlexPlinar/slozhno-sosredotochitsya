@@ -24,7 +24,7 @@
 }
 
 .theme-light .header__rec {
-  display: none !important; 
+  display: none; 
 }
 
 .theme-light .header__theme-menu {
@@ -48,6 +48,8 @@
 
   .theme-auto .page {
     background-image: url("../images/cover-image-light.png");
+    background-color: var(--background-color);
+    color: var(--text-color);
   }
 
   .theme-auto .header__rec {
