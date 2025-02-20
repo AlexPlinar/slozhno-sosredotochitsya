@@ -10,6 +10,7 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --background-color: #000028;
+  --text-title-color: #000028; 
   --text-color: #F1B2CE;
   --accent-color: #ff0070;
   --focus-color: #DB00FF;
@@ -19,7 +20,6 @@
 
 .theme-dark .page {
   background-image: url("../images/cover-image-dark.png");
-  background-color: var(--background-color);
   color: var(--text-color);
 }
 
@@ -31,6 +31,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background-color: #000028;
+    --text-title-color: #000028; 
     --text-color: #F1B2CE;
     --accent-color: #ff0070;
     --focus-color: #DB00FF;
@@ -44,7 +45,6 @@
 
   .theme-auto .page {
     background-image: url("../images/cover-image-dark.png");
-    background-color: var(--background-color);
     color: var(--text-color);
   }
   
