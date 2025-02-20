@@ -65,7 +65,7 @@ a:focus-visible {
     "navigation"
     "no-focus"
     "text";
-  height: 100%;
+  height: 100vh;
 }
 
 .header__rec {
@@ -396,4 +396,3 @@ REC REC align-self - right
   } */
 /* Надо подумать через цифры или areas сделать. В правую колонку непонятно как элементы добавлять. 
   Добавляется элемент на всю строку? rec rec. А выравнивается как? */
-}
