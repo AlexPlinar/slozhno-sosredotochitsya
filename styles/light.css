@@ -32,6 +32,10 @@
   margin-block-start: 73px;
 }
 
+.theme-light .main__section {
+  background-color: var(--background-color); 
+}
+
 /* Работает при Auto theme */
 @media (prefers-color-scheme: light) {
   :root {
@@ -56,6 +60,10 @@
 
   .theme-auto .header__theme-menu {
     margin-block-start: 73px;
+  }
+
+  .theme-auto .main__section {
+    background-color: var(--background-color); 
   }
 
 }
