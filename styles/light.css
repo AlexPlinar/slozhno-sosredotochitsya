@@ -25,11 +25,7 @@
 }
 
 .theme-light .header__rec {
-  display: none;
-}
-
-.theme-light .header__theme-menu {
-  margin-block-start: 73px;
+  visibility: hidden;
 }
 
 .theme-light .main__section {
@@ -55,11 +51,7 @@
   }
 
   .theme-auto .header__rec {
-    display: none;
-  }
-
-  .theme-auto .header__theme-menu {
-    margin-block-start: 73px;
+    visibility: hidden;
   }
 
   .theme-auto .main__section {

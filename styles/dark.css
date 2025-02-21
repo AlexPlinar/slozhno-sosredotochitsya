@@ -25,7 +25,7 @@
 }
 
 .theme-dark .header__rec {
-  display: block;
+  visibility: visible;
 }
 
 /* Работает при Auto theme */
@@ -41,7 +41,7 @@
   }
 
   .theme-auto .header__rec {
-    display: block;
+    visibility: visible;
   }
 
   .theme-auto .page {
