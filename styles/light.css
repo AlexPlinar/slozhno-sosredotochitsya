@@ -29,7 +29,7 @@
 }
 
 .theme-light .main__section {
-  background-color: var(--background-color); 
+  background-color: var(--background-color);
 }
 
 /* Работает при Auto theme */
@@ -55,7 +55,7 @@
   }
 
   .theme-auto .main__section {
-    background-color: var(--background-color); 
+    background-color: var(--background-color);
   }
 
 }
