@@ -342,7 +342,7 @@ a:focus-visible {
     grid-template-columns: 229px 230px 229px;
     gap: 20px;
     margin-block-start: 18px;
-    place-content: center; 
+    place-content: center;
   }
 
   .section4 .gallery__item:nth-child(1) {
