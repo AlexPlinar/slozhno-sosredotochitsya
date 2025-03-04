@@ -302,11 +302,12 @@ a:focus-visible {
   }
 
   .how .main__section-title {
-    grid-row: 1 / 6;
+    grid-row: 1 / 7;
   }
 
   .how .main__article-title {
-    margin-block-end: 20px;
+    /* margin-block-end: 20px; */
+    margin-block-end: 0;
   }
 
   .main__article-subtitle {
@@ -449,11 +450,11 @@ a:focus-visible {
 
   /* не уверен как иначе растянуть */
   .how .main__section-title {
-    grid-row: 1 / 6;
+    grid-row: 1 / 7;
   }
 
   .how .main__article-title {
-    margin-block-end: 20px;
+    margin-block-end: 0;
   }
 
   .main__article-subtitle {
